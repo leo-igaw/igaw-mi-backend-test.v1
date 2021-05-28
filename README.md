@@ -2,7 +2,7 @@
 
 ## 환경설정
 
-- 쿼리 테스트 페이지에 접속 ([CLICK](http://sqlfiddle.com/))
+- 쿼리 테스트 페이지에 접속 \[[CLICK](http://sqlfiddle.com/){:target="_blank"}\]
 - 좌측 패널에 아래 스키마를 작성하여 테이블 생성
 
 ```mysql
