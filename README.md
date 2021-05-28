@@ -56,11 +56,12 @@ INSERT INTO `user_role` (`role_id`, `role`) VALUES
 -- 사용자와 권한 관계 정보
 CREATE TABLE IF NOT EXISTS `rel_user_role` (
 `id` varchar(20) NOT NULL,
-`role` varchar(20) NOT NULL,
-PRIMARY KEY (`id`, `role`)
+`role_id` int NOT NULL,
+CONSTRAINT `user_FK` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
+CONSTRAINT `user_role_FK` FOREIGN KEY (`role_id`) REFERENCES `user_role` (`role_id`)
 ) DEFAULT CHARSET=utf8;
 
-INSERT INTO `rel_user_role` (`id`, `role`) VALUES
+INSERT INTO `rel_user_role` (`id`, `role_id`) VALUES
 ('Landy', 1),
 ('Leo', 1),
 ('Roy', 3),
@@ -101,24 +102,24 @@ INSERT INTO `inactive_user` (`id`, `name`, `email`) VALUES
    |  3   |    0    |
    |  4   |    0    |
    |  5   |    0    |
-   |  6   |    0    |
-   |  7   |    2    |
-   |  8   |    3    |
-   |  9   |    1    |
-   |  10   |    2    |
-   |  11   |    3    |
-   |  12   |    0    |
-   |  13   |    5    |
-   |  14   |    2    |
+   |  6   |    1    |
+   |  7   |    1    |
+   |  8   |    1    |
+   |  9   |    4    |
+   |  10   |    1    |
+   |  11   |    1    |
+   |  12   |    1    |
+   |  13   |    1    |
+   |  14   |    1    |
    |  15   |    1    |
-   |  16   |    4    |
-   |  17   |    5    |
-   |  18   |    1    |
+   |  16   |    1    |
+   |  17   |    3    |
+   |  18   |    2    |
    |  19   |    2    |
    |  20   |    0    |
-   |  21   |    1    |
+   |  21   |    2    |
    |  22   |    0    |
-   |  23   |    0    |
+   |  23   |    1    |
 
    
    
