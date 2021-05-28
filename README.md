@@ -2,8 +2,8 @@
 
 ## 환경설정
 
-- 쿼리 테스트 페이지에 접속 <a href="http://sqlfiddle.com/" target="_blank">\[CLICK\]</a>
-- 좌측 패널에 아래 스키마를 작성하여 테이블 생성
+- 쿼리 테스트 페이지에 접속 CTRL + [\[CLICK\]](http://sqlfiddle.com)
+- 좌측 패널에 아래 스키마를 작성하여 테이블 생성(Build Schema)
 
 ```mysql
 -- 사용자 정보
@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS `inactive_user` (
 `email` varchar(100) NOT NULL,
 PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8;
+
 INSERT INTO `inactive_user` (`id`, `name`, `email`) VALUES
 ('Robin', '장수', 'robin@igaworks.com'),
 ('Julian', '충수', 'julian@igaworks.com');
